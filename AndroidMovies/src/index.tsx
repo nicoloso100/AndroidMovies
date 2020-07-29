@@ -2,8 +2,8 @@ import React, {useEffect} from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
 
 import SplashScreen from 'react-native-splash-screen';
-import Movies from './scenes/movies';
-import {PRIMARY_COLOR} from './styles/colors';
+import {PRIMARY_COLOR} from '@styles/colors';
+import Movies from '@scenes/movies';
 
 declare const global: {HermesInternal: null | {}};
 
