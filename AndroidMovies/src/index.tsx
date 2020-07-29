@@ -1,13 +1,9 @@
 import React, {useEffect} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
 
 import SplashScreen from 'react-native-splash-screen';
+import Movies from './scenes/movies';
+import {PRIMARY_COLOR} from './styles/colors';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -18,12 +14,12 @@ const App = () => {
 
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="#032541" />
+      <StatusBar barStyle="light-content" backgroundColor={PRIMARY_COLOR} />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <View />
+          <Movies />
         </ScrollView>
       </SafeAreaView>
     </>
