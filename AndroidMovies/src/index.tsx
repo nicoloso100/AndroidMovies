@@ -1,11 +1,10 @@
 import React, {useEffect} from 'react';
-import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
-
+import {Provider} from 'react-redux';
 import SplashScreen from 'react-native-splash-screen';
-import {PRIMARY_COLOR} from '@styles/colors';
-import Movies from '@scenes/movies';
+import AppNavigator from 'navigation/app-navigator';
+import configureStore from 'configureStore';
 
-declare const global: {HermesInternal: null | {}};
+let store = configureStore();
 
 const App = () => {
   useEffect(() => {
@@ -13,23 +12,10 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <StatusBar barStyle="light-content" backgroundColor={PRIMARY_COLOR} />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Movies />
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
   );
 };
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: 'white',
-  },
-});
 
 export default App;
