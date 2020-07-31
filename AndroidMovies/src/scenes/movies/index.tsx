@@ -1,10 +1,14 @@
 import * as React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
+import {MoviesProps} from 'navigation/movies-navigator-types';
+import TitleAndSearch from '@components/organisms/titleAndSearch';
 
-const Movies: React.FC = () => {
+//navigation.navigate('MoviesDetails')
+
+const Movies: React.FC<MoviesProps> = ({navigation}: MoviesProps) => {
   return (
     <View>
-      <Text>Holaaa</Text>
+      <TitleAndSearch />
     </View>
   );
 };
