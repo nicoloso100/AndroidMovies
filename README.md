@@ -4,6 +4,8 @@
 Prueba técnica Imaginamos
 Nicolás Angarita Ortiz
 
+> NOTA: Subo .env por si requieren tener a la mano el token del API
+
 [Descargar APK](https://drive.google.com/file/d/1xSTYhSz2E1wvo-UGhHrdoQ62XLsmbJYo/view?usp=sharing)
 
 ![enter image description here](https://i.imgur.com/Fyv5zSn.png)
