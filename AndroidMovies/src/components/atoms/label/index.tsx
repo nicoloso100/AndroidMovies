@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {Text} from 'react-native';
+import {MyText} from './styles';
 
 interface LabelProps {
   text: string;
 }
 
 const Label: React.FC<LabelProps> = ({text}) => {
-  return <Text>{text}</Text>;
+  return <MyText>{text}</MyText>;
 };
 
 export default Label;

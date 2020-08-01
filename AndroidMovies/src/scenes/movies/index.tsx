@@ -1,15 +1,15 @@
 import * as React from 'react';
-import {View} from 'react-native';
 import {MoviesProps} from 'navigation/movies-navigator-types';
 import TitleAndSearch from '@components/organisms/titleAndSearch';
+import MoviesList from '@components/organisms/moviesList';
+import {ScreenContainer} from './styles';
 
-//navigation.navigate('MoviesDetails')
-
-const Movies: React.FC<MoviesProps> = ({navigation}: MoviesProps) => {
+const Movies: React.FC<MoviesProps> = () => {
   return (
-    <View>
+    <ScreenContainer>
       <TitleAndSearch />
-    </View>
+      <MoviesList />
+    </ScreenContainer>
   );
 };
 

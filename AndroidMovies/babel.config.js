@@ -27,6 +27,8 @@ module.exports = {
           '@styles': './src/styles',
           '@utils': './src/utils',
           '@reducers': './src/reducers',
+          '@actions': './src/actions',
+          '@interfaces': './src/interfaces',
         },
       },
     ],
