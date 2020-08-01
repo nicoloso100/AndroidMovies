@@ -24,9 +24,10 @@ export interface MovieGenresInterface {
 export interface MovieDetailsInterface extends MoviesInterface {
   backdrop_path: string;
   overview: string;
-  production_companies: MovieProductionCompaniesInterface;
+  production_companies: MovieProductionCompaniesInterface[];
   release_date: Date;
   genres: MovieGenresInterface[];
+  homepage: string;
 }
 
 export interface MovieCastInterface {

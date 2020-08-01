@@ -14,7 +14,6 @@ const MoviesList = () => {
   const dispatch = useDispatch();
 
   const onSelectMovie = (movieId: number) => {
-    console.log(movieId);
     GetMovieDetails(movieId).then((movie: MovieDetailsInterface) => {
       dispatch(updateMovieDetails(movie));
       GetMovieCasting(movieId).then((casting: MovieCastingInterface) => {

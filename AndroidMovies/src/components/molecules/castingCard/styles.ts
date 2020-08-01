@@ -1,8 +1,7 @@
 import styled from 'styled-components/native';
 
-export const MovieDetailsContainer = styled.View`
-  flex: 1;
+export const CastingCardContainer = styled.View`
   display: flex;
   flex-direction: column;
-  background-color: #476576;
+  margin: 10px;
 `;
