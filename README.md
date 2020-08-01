@@ -6,6 +6,8 @@ Nicolás Angarita Ortiz
 
 [Descargar APK](https://drive.google.com/file/d/1xSTYhSz2E1wvo-UGhHrdoQ62XLsmbJYo/view?usp=sharing)
 
+![enter image description here](https://i.imgur.com/Fyv5zSn.png)
+
 ## Compatibilidad
 
  - [x] Solo para dispositivos Android
@@ -23,6 +25,25 @@ Nicolás Angarita Ortiz
     npm install
     npm run android
 
+## ¿Qué se utilizó?
+
+ - react-native 0.63.0
+ - react-navigation/native 5.7.2
+ - redux 4.0.5
+ - styled-components 5.1.1
+ - typescript 3.8.3react
+ - eslint 6.5.1
+ - prettier 2.0.5
+
+![enter image description here](https://i.imgur.com/FFJcRhx.jpg)
+
+## ¿Qué funcionalidades se integraron?
+
+ - Listado de películas populares y mejor calificadas
+ - Detalle de cada película
+ - Drawer para activar DarkMode
+ - Splash Screen
+
 ## Metodología Git
 
 Para el flujo de Git se utilizaron las ramas master, develop y features, manteniendo un flujo de trabajo basado en GitFlow.
@@ -32,9 +53,10 @@ Para el flujo de Git se utilizaron las ramas master, develop y features, manteni
 ## Tests e integración continua
 
 Para automatizar el procesos de testing y despliegue de la app se utilizó App Center, conectado al proyecto de GitHub desde la rama master realiza un compilado, unas pruebas en dispositivos reales y genera un release de la apk.
-![enter image description here](https://i.imgur.com/LMS3nRq.png)
 
-![enter image description here](https://i.imgur.com/FZIQWnY.png)
+![enter image description here](https://i.imgur.com/EQa1fDd.png)
+
+![enter image description here](https://i.imgur.com/FivIggM.png)
 
 ## Configuración de la estructura
 Para la estructura del proyecto se usó la metodología de **Atomic Components**
