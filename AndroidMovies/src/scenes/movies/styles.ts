@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
 
-export const ScreenContainer = styled.View`
+export const ScreenContainer = styled.View<{darkTheme: boolean}>`
   display: flex;
   flex-direction: column;
-  background-color: #7ab1d1;
+  background-color: ${(props) => (props.darkTheme ? '#032541' : '#FFFFFF')};
   flex: 1;
 `;

@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
 
-export const MovieDetailsContainer = styled.View`
+export const MovieDetailsContainer = styled.View<{darkTheme: boolean}>`
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #476576;
+  background-color: ${(props) => (props.darkTheme ? '#476576' : '#EFEFEF')};
 `;

@@ -4,7 +4,7 @@ export const MovieTitleAndRatingContainer = styled.View`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100px;
+  min-height: 100px;
 `;
 
 export const WatchAndRatingContainer = styled.View`
@@ -12,4 +12,6 @@ export const WatchAndRatingContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;

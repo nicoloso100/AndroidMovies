@@ -21,9 +21,13 @@ const DarkModeSwitch: React.FC<DarkModeSwitchProps> = () => {
   };
 
   return (
-    <DarkModeSwitchContainer>
+    <DarkModeSwitchContainer darkMode={selector.enabled}>
       <Label text="Habilitar darkmode" />
-      <MySwitch value={selector.enabled} onChange={onSwitchChanged} />
+      <MySwitch
+        value={selector.enabled}
+        darkTheme={selector.enabled}
+        onChange={onSwitchChanged}
+      />
     </DarkModeSwitchContainer>
   );
 };

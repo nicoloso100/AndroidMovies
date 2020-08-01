@@ -7,12 +7,18 @@ import {
   DrawerContentOptions,
   DrawerItem,
 } from '@react-navigation/drawer';
-import {NavigationContainer} from '@react-navigation/native';
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from '@react-navigation/native';
 import MoviesNavigator from './movies-navigator';
 import {RootStackParamList} from './app-navigator-types';
 import {Linking} from 'react-native';
 import DarkModeSwitch from '@components/molecules/darkModeSwitch';
 import DrawerLogo from '@components/atoms/logoImage';
+import {useSelector} from 'react-redux';
+import {RootState} from '@reducers/index';
 
 const Drawer = createDrawerNavigator<RootStackParamList>();
 
@@ -43,8 +49,10 @@ const CustomDrawerContent = (
 };
 
 export default function App() {
+  const selector = useSelector((state: RootState) => state.darkMode);
+
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={selector.enabled ? DarkTheme : DefaultTheme}>
       <Drawer.Navigator drawerContent={CustomDrawerContent}>
         <Drawer.Screen name="Movies" component={MoviesNavigator} />
       </Drawer.Navigator>

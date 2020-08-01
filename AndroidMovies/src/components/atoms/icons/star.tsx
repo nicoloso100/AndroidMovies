@@ -9,7 +9,7 @@ interface StarIconProps {
 const StarIcon: React.FC<StarIconProps> = ({filled}) => {
   return (
     <MarginIconContainer>
-      <Icon name="star" size={15} color={filled ? '#F1E536' : '#B1AE81'} />
+      <Icon name="star" size={15} color={filled ? '#F0D021' : '#B1AE81'} />
     </MarginIconContainer>
   );
 };
