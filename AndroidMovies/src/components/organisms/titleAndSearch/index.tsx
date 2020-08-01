@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {View} from 'react-native';
 import Title from '@components/atoms/title';
+import {TitleContainer} from './styles';
 
 const TitleAndSearch: React.FC = () => {
   return (
-    <View>
+    <TitleContainer>
       <Title text="Hola!, ¿Qué película deseas ver?" />
-    </View>
+    </TitleContainer>
   );
 };
 

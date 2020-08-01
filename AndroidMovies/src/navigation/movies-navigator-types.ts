@@ -10,7 +10,7 @@ type MoviesRouteProp = RouteProp<MoviesParamList, 'Movies'>;
 type MoviesDetailsRouteProp = RouteProp<MoviesParamList, 'Movies'>;
 
 type MoviesNavigationProp = StackNavigationProp<MoviesParamList, 'Movies'>;
-type MoviesDetailsNavigationProp = StackNavigationProp<
+export type MoviesDetailsNavigationProp = StackNavigationProp<
   MoviesParamList,
   'MoviesDetails'
 >;

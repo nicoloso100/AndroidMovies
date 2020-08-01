@@ -12,7 +12,7 @@ import MoviesNavigator from './movies-navigator';
 import {RootStackParamList} from './app-navigator-types';
 import {Linking} from 'react-native';
 import DarkModeSwitch from '@components/molecules/darkModeSwitch';
-import DrawerLogo from '@components/atoms/image';
+import DrawerLogo from '@components/atoms/logoImage';
 
 const Drawer = createDrawerNavigator<RootStackParamList>();
 

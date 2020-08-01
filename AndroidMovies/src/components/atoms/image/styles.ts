@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
 
-export const DrawerIconContainer = styled.View`
-  padding: 15px;
-`;
-
-export const DrawerIconComponent = styled.Image`
-  width: 100%;
-  height: 50px;
-  flex: 1;
+export const ImageContainer = styled.Image<{
+  customwidth: string;
+  customheight: string;
+  radius: string;
+}>`
+  border-radius: ${(props) => props.radius};
+  width: ${(props) => props.customwidth};
+  height: ${(props) => props.customheight};
 `;

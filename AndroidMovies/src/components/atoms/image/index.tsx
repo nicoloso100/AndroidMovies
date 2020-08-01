@@ -1,14 +1,23 @@
 import * as React from 'react';
-import {DrawerIconComponent, DrawerIconContainer} from './styles';
+import {ImageContainer} from './styles';
 
-const Icon = require('assets/images/drawerIcon.png');
+interface ImageProps {
+  URL: string;
+  width?: string;
+  height?: string;
+  radius?: string;
+}
 
-const DrawerLogo: React.FC = () => {
+const MyImage: React.FC<ImageProps> = ({URL, width, height, radius}) => {
   return (
-    <DrawerIconContainer>
-      <DrawerIconComponent source={Icon} resizeMode="contain" />
-    </DrawerIconContainer>
+    <ImageContainer
+      source={{uri: URL}}
+      resizeMode="cover"
+      customwidth={width ? width : 'auto'}
+      customheight={height ? height : 'auto'}
+      radius={radius ? radius : '15px'}
+    />
   );
 };
 
-export default DrawerLogo;
+export default MyImage;
