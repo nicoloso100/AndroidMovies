@@ -9,9 +9,10 @@ import MovieDetailsSection from '@components/organisms/movieDetailsSection';
 
 const MovieDetails: React.FC<MoviesDetailsProps> = () => {
   const selector = useSelector((state: RootState) => state.movieDetails);
+  const selectorDarkmode = useSelector((state: RootState) => state.darkMode);
 
   return (
-    <MovieDetailsContainer>
+    <MovieDetailsContainer darkTheme={selectorDarkmode.enabled}>
       {selector.movie !== null && selector.casting !== null && (
         <React.Fragment>
           <MyImage
