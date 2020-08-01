@@ -79,12 +79,13 @@ Finalmente, se agregó una configuración básica de **Eslint Airbnb** y **Prett
 
 La descripción del rol de cada carpeta es el siguiente:
 
-**actions**: Contiene las peticiones al API y las acciones de Redux
-**assets**: Almacena una carpeta con las imágenes (PNG, JPG) o SVG.
-**components**: Alamcena la estructura de Atomic Components.
-**interfaces**: Contiene y exporta todas las interfaces utilziadas en la aplicación con la integración de Typescript.
-**navigation**: Almacena la navegación de el Drawer y la navegación interna de la app.
-**reducers**: Contiene los reducers de Redux.
-**scenes**: Contiene las escenas principales.
-**styles**: Almacena los estilos generales y la paleta de colores.
-**utils**: Contiene utilidades y constantes.
+ - **actions**: Contiene las peticiones al API y las acciones de Redux
+ - **components**: Alamcena la estructura de Atomic Components.
+ - **interfaces**: Contiene y exporta todas las interfaces utilziadas en la aplicación con la integración de Typescript.
+ - **navigation**: Almacena la navegación de el Drawer y la navegación interna de la app.
+ - **reducers**: Contiene los reducers de Redux.
+ - **scenes**: Contiene las escenas principales.
+ - **styles**: Almacena los estilos generales y la paleta de colores
+ - **utils**: Contiene utilidades y constantes.
+
+
