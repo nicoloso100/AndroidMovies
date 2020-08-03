@@ -22,6 +22,9 @@ import {RootState} from '@reducers/index';
 
 const Drawer = createDrawerNavigator<RootStackParamList>();
 
+/**
+ * Componente de Drawer personalizado
+ */
 const CustomDrawerContent = (
   props: DrawerContentComponentProps<DrawerContentOptions>,
 ) => {
@@ -48,6 +51,9 @@ const CustomDrawerContent = (
   );
 };
 
+/**
+ * Navegación principal de tipo Drawer
+ */
 export default function App() {
   const selector = useSelector((state: RootState) => state.darkMode);
 

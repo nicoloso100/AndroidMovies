@@ -8,10 +8,23 @@ import {
 import Label from '@components/atoms/label';
 
 interface MovieFooterInfoProps {
+  /**
+   * Lista de estudios vinculados con la película
+   */
   studios: string[];
+  /**
+   * Género de la película
+   */
   genre: string[];
+  /**
+   * Fecha de lanzamiento de la película
+   */
   release: Date;
 }
+
+/**
+ * Componente que muestra los estudios, géneros y la fecha de lanzamiento de la película
+ */
 
 const MovieFooterInfo: React.FC<MovieFooterInfoProps> = ({
   studios,

@@ -8,14 +8,24 @@ import {MoviesInterface, MoviesRequestInterface} from 'interfaces';
 import {GetTopRatedMovies} from 'actions/api-calls';
 
 interface TopRatedMoviesProps {
+  /**
+   * Evento al seleccionar una película
+   */
   onSelectMovie: (movieId: number) => void;
 }
 
+/**
+ * Lista de películas más votadas
+ */
 const TopRatedMovies: React.FC<TopRatedMoviesProps> = ({onSelectMovie}) => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
   const [maxPage, setMaxPage] = React.useState<number>(0);
   const [moviesList, setMoviesList] = React.useState<MoviesInterface[]>([]);
 
+  /**
+   * Método para obtener las películas más votadas según su paginación
+   * @param newPage Número de paginación
+   */
   const fetchData = (newPage: number) => {
     GetTopRatedMovies(newPage).then((response: MoviesRequestInterface) => {
       setMoviesList([...moviesList, ...response.results]);

@@ -6,6 +6,10 @@ import {
   MovieCastingInterface,
 } from 'interfaces';
 
+/**
+ * Action para obtener las últimas pleículas
+ * @param page Número de paginación
+ */
 export const GetLatestMovies = async (
   page: number,
 ): Promise<MoviesRequestInterface> => {
@@ -14,6 +18,10 @@ export const GetLatestMovies = async (
   return data;
 };
 
+/**
+ * Action para obtener las películas más votadas
+ * @param page Número de paginación
+ */
 export const GetTopRatedMovies = async (
   page: number,
 ): Promise<MoviesRequestInterface> => {
@@ -22,6 +30,10 @@ export const GetTopRatedMovies = async (
   return data;
 };
 
+/**
+ * Action para obtener el detalle de una película
+ * @param movieId ID de la película
+ */
 export const GetMovieDetails = async (
   movieId: number,
 ): Promise<MovieDetailsInterface> => {
@@ -30,6 +42,10 @@ export const GetMovieDetails = async (
   return data;
 };
 
+/**
+ * Action para obtener el casting de una película
+ * @param movieId ID de la película
+ */
 export const GetMovieCasting = async (
   movieId: number,
 ): Promise<MovieCastingInterface> => {
