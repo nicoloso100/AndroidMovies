@@ -2,7 +2,10 @@ import * as React from 'react';
 import Title from '@components/atoms/title';
 import {TitleContainer} from './styles';
 
-const TitleAndSearch: React.FC = () => {
+/**
+ * Componente que muestra el título de la pantalla principal
+ */
+const MainTitle: React.FC = () => {
   return (
     <TitleContainer>
       <Title text="Hola!, ¿Qué película deseas ver?" />
@@ -10,4 +13,4 @@ const TitleAndSearch: React.FC = () => {
   );
 };
 
-export default TitleAndSearch;
+export default MainTitle;

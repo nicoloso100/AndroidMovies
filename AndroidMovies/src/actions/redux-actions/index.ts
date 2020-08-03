@@ -5,6 +5,10 @@ import {
 } from '@reducers/movie-details-reducer';
 import {SET_MOVIE_DETAILS, SET_MOVIE_CASTING} from '@utils/constants';
 
+/**
+ * Action de redux para almacenar el detalle de una película
+ * @param movie Objeto de detalle de la película
+ */
 export function updateMovieDetails(
   movie: MovieDetailsInterface,
 ): SendMovieAction {
@@ -14,6 +18,10 @@ export function updateMovieDetails(
   };
 }
 
+/**
+ * Action de redux para almacenar el casting de una película
+ * @param movie Objeto de detalle del casting de una película
+ */
 export function updateMovieCasting(
   movie: MovieCastingInterface,
 ): SendCastingAction {

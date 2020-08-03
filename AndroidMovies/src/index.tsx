@@ -6,7 +6,13 @@ import configureStore from 'configureStore';
 
 let store = configureStore();
 
+/**
+ * Inicio de la aplicación
+ */
 const App = () => {
+  /**
+   * Desaparece el SplashScreen al iniciar la aplicación
+   */
   useEffect(() => {
     SplashScreen && SplashScreen.hide();
   }, []);

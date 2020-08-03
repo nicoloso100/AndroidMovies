@@ -7,6 +7,9 @@ import MyImage from '@components/atoms/image';
 import {APIImages} from '@utils/constants';
 import MovieDetailsSection from '@components/organisms/movieDetailsSection';
 
+/**
+ * Escena principal para mostrar el detalle de una película
+ */
 const MovieDetails: React.FC<MoviesDetailsProps> = () => {
   const selector = useSelector((state: RootState) => state.movieDetails);
   const selectorDarkmode = useSelector((state: RootState) => state.darkMode);

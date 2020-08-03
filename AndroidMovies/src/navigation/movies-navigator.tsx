@@ -6,6 +6,9 @@ import {MoviesParamList} from './movies-navigator-types';
 
 const Stack = createStackNavigator<MoviesParamList>();
 
+/**
+ * Navegación secundaria de la aplicación
+ */
 const MoviesNavigator = () => {
   return (
     <Stack.Navigator

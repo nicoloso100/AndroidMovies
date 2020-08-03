@@ -8,10 +8,17 @@ import {RootState} from '@reducers/index';
 
 interface DarkModeSwitchProps {}
 
+/**
+ * Componente de Switch para habilitar o deshabilitar el DarkMode
+ */
+
 const DarkModeSwitch: React.FC<DarkModeSwitchProps> = () => {
   const selector = useSelector((state: RootState) => state.darkMode);
   const dispatch = useDispatch();
 
+  /**
+   * Método que almacena en Redux el estado del Darkmode
+   */
   const onSwitchChanged = (checked: boolean) => {
     if (checked) {
       dispatch({type: SET_DARKMODE_ENABLED});
@@ -23,11 +30,7 @@ const DarkModeSwitch: React.FC<DarkModeSwitchProps> = () => {
   return (
     <DarkModeSwitchContainer darkMode={selector.enabled}>
       <Label text="Habilitar darkmode" />
-      <MySwitch
-        value={selector.enabled}
-        darkTheme={selector.enabled}
-        onChange={onSwitchChanged}
-      />
+      <MySwitch value={selector.enabled} onChange={onSwitchChanged} />
     </DarkModeSwitchContainer>
   );
 };

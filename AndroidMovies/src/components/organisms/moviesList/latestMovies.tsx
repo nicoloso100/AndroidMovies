@@ -8,14 +8,24 @@ import {MoviesInterface, MoviesRequestInterface} from 'interfaces';
 import {GetLatestMovies} from 'actions/api-calls';
 
 interface LatestMoviesProps {
+  /**
+   * Evento al seleccionar una película
+   */
   onSelectMovie: (movieId: number) => void;
 }
 
+/**
+ * Lista de películas más recientes
+ */
 const LatestMovies: React.FC<LatestMoviesProps> = ({onSelectMovie}) => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
   const [maxPage, setMaxPage] = React.useState<number>(0);
   const [moviesList, setMoviesList] = React.useState<MoviesInterface[]>([]);
 
+  /**
+   * Método para obtener las películas recientes según su paginación
+   * @param newPage Número de paginación
+   */
   const fetchData = (newPage: number) => {
     GetLatestMovies(newPage).then((response: MoviesRequestInterface) => {
       setMoviesList([...moviesList, ...response.results]);

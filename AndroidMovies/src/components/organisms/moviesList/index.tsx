@@ -11,13 +11,20 @@ import {GetMovieDetails, GetMovieCasting} from 'actions/api-calls';
 import {RootState} from '@reducers/index';
 import {ActivityIndicator} from 'react-native';
 
-const MoviesList = () => {
+/**
+ * Componente que agrupa las listas de películas
+ */
+const MoviesList: React.FC = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   const navigation = useNavigation<MoviesDetailsNavigationProp>();
   const selector = useSelector((state: RootState) => state.darkMode);
   const dispatch = useDispatch();
 
+  /**
+   * Método que carga la información de la película seleccionada y abre la pantalla de detalle de película
+   * @param movieId ID de la película seleccionada
+   */
   const onSelectMovie = (movieId: number) => {
     setIsLoading(true);
     GetMovieDetails(movieId).then((movie: MovieDetailsInterface) => {
